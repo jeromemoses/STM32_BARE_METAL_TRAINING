@@ -1,0 +1,3 @@
+../Src/uart.c:18:6:uart_init	8	static
+../Src/uart.c:68:6:uart_write	16	static
+../Src/uart.c:76:5:uart_read	8	static
