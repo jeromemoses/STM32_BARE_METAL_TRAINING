@@ -8,6 +8,6 @@
 #ifndef EXTI_H_
 #define EXTI_H_
 
-
+void exti_pc13_init(void);
 
 #endif /* EXTI_H_ */

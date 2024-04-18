@@ -16,7 +16,7 @@ void exti_pc13_init(void)
 	RCC->AHBENR |= GPIOCEN;
 
 	//enable clock for sysconfig
-	RCC->APBENR |= SYSCFGEN;
+	RCC->APB2ENR |= SYSCFGEN;
 
 	//set GPIO PC13 as input
 	GPIOC->MODER &= ~(1U<<26);
@@ -34,7 +34,7 @@ void exti_pc13_init(void)
 	EXTI->FTSR |= TR13;
 
 	//enable the interrupt in global
-	NVIC__EnableIRQ(EXTI4_15_IRQn);
+	NVIC_EnableIRQ(EXTI4_15_IRQn);
 
 	//enable the global interrupt
 	__enable_irq();
