@@ -4,5 +4,4 @@ enstm32cubef0/
 # STM32CubeIDE
 
 .metadata/
-# .settings/
-*.ld
+
