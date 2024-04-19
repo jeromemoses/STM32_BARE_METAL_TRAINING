@@ -1,0 +1,5 @@
+../Src/uart.c:21:6:uart_init	8	static
+../Src/uart.c:71:6:uart_write	16	static
+../Src/uart.c:79:5:uart_read	8	static
+../Src/uart.c:87:6:can_blink	8	static
+../Src/uart.c:92:5:__io_putchar	16	static
