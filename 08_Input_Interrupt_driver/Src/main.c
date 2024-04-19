@@ -19,7 +19,7 @@ int main(void)
 	while(1)
 	{
 		printf("count = %ld\r\n",counter++);
-		for (var = 0; var < 1000; ++var);
+		for (var = 0; var < 54000; ++var);
 	}
 }
 

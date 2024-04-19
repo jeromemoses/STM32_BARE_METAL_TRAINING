@@ -22,7 +22,7 @@ void exti_pc13_init(void)
 	GPIOC->MODER &= ~(1U<<26);
 	GPIOC->MODER &= ~(1U<<27);
 
-	//pc1 should generator EXTI13
+	//pc13 should generate EXTI13
 	SYSCFG->EXTICR[3] &= ~(1U<<6);
 	SYSCFG->EXTICR[3] |= (1U<<5);
 	SYSCFG->EXTICR[3] &= ~(1U<<4);

@@ -335,7 +335,7 @@ __STATIC_FORCEINLINE void __disable_irq(void)
  800029e:	400a      	ands	r2, r1
  80002a0:	601a      	str	r2, [r3, #0]
 
-	//pc1 should generator EXTI13
+	//pc13 should generate EXTI13
 	SYSCFG->EXTICR[3] &= ~(1U<<6);
  80002a2:	4b18      	ldr	r3, [pc, #96]	; (8000304 <exti_pc13_init+0x9c>)
  80002a4:	695a      	ldr	r2, [r3, #20]
@@ -425,31 +425,30 @@ int main(void)
  800031e:	687b      	ldr	r3, [r7, #4]
  8000320:	1c5a      	adds	r2, r3, #1
  8000322:	607a      	str	r2, [r7, #4]
- 8000324:	4a0a      	ldr	r2, [pc, #40]	; (8000350 <main+0x44>)
+ 8000324:	4a09      	ldr	r2, [pc, #36]	; (800034c <main+0x40>)
  8000326:	0019      	movs	r1, r3
  8000328:	0010      	movs	r0, r2
  800032a:	f000 faab 	bl	8000884 <iprintf>
-		for (var = 0; var < 1000; ++var);
- 800032e:	4b09      	ldr	r3, [pc, #36]	; (8000354 <main+0x48>)
+		for (var = 0; var < 54000; ++var);
+ 800032e:	4b08      	ldr	r3, [pc, #32]	; (8000350 <main+0x44>)
  8000330:	2200      	movs	r2, #0
  8000332:	601a      	str	r2, [r3, #0]
  8000334:	e004      	b.n	8000340 <main+0x34>
- 8000336:	4b07      	ldr	r3, [pc, #28]	; (8000354 <main+0x48>)
+ 8000336:	4b06      	ldr	r3, [pc, #24]	; (8000350 <main+0x44>)
  8000338:	681b      	ldr	r3, [r3, #0]
  800033a:	1c5a      	adds	r2, r3, #1
- 800033c:	4b05      	ldr	r3, [pc, #20]	; (8000354 <main+0x48>)
+ 800033c:	4b04      	ldr	r3, [pc, #16]	; (8000350 <main+0x44>)
  800033e:	601a      	str	r2, [r3, #0]
- 8000340:	4b04      	ldr	r3, [pc, #16]	; (8000354 <main+0x48>)
- 8000342:	681a      	ldr	r2, [r3, #0]
- 8000344:	23fa      	movs	r3, #250	; 0xfa
- 8000346:	009b      	lsls	r3, r3, #2
- 8000348:	429a      	cmp	r2, r3
- 800034a:	dbf4      	blt.n	8000336 <main+0x2a>
+ 8000340:	4b03      	ldr	r3, [pc, #12]	; (8000350 <main+0x44>)
+ 8000342:	681b      	ldr	r3, [r3, #0]
+ 8000344:	4a03      	ldr	r2, [pc, #12]	; (8000354 <main+0x48>)
+ 8000346:	4293      	cmp	r3, r2
+ 8000348:	ddf5      	ble.n	8000336 <main+0x2a>
 		printf("count = %ld\r\n",counter++);
- 800034c:	e7e7      	b.n	800031e <main+0x12>
- 800034e:	46c0      	nop			; (mov r8, r8)
- 8000350:	080016a8 	.word	0x080016a8
- 8000354:	20000078 	.word	0x20000078
+ 800034a:	e7e8      	b.n	800031e <main+0x12>
+ 800034c:	080016a8 	.word	0x080016a8
+ 8000350:	20000078 	.word	0x20000078
+ 8000354:	0000d2ef 	.word	0x0000d2ef
 
 08000358 <exti_callback>:
 	}
