@@ -1,0 +1,2 @@
+../Src/systick.c:10:6:systick	24	static
+../Src/systick.c:34:6:systick_interrupt_init	8	static
